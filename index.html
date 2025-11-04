@@ -1,49 +1,45 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>FoC</title>
-<link rel="stylesheet" type="text/css" href="style.css">
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-
+    <title>Sum Two Numbers</title>
 </head>
 <body>
-<link rel="stylesheet" href="style.css">
+    <h2>Add Two Numbers</h2>
+    <input type="number" id="num1" placeholder="Enter first number">
+    <input type="number" id="num2" placeholder="Enter second number">
+    <button onclick="calculateSum()">Calculate Sum</button>
+    <p>Result: <span id="result"></span></p>
+	
+	<h2>Product Of Two Numbers</h2>
+    <input type="number" id="pnum1" placeholder="Enter first number">
+    <input type="number" id="pnum2" placeholder="Enter second number">
+    <button onclick="calculateProduct()">Calculate Product</button>
+    <p>Result: <span id="presult"></span></p>
 
-<header>
-  <h2><b>Fundamentals of Computing</b></h2>
-</header>
-
-<section>
-  <nav>
-    <ul>
-      <li><h5><a href="index.html">Course</a></h5></li>
-      <li><h5><a href="project.html">Project</a></h5></li>
-	  <li><h5><a href="concepts.html">Concepts</a></h5></li>
-	  <li><h5><a href="database.html">Databases</a></h5></li>
-	  <li><h5><a href="documentation.html">Documentation</a></h5></li>
-      <li><h5><a href="aboutme.html">Dev Team</a></h5></li>
-    </ul>
-  </nav>
-  
-  <article>
-   <center><img src="img.1.jpg" alt="FoC"  width="450" height="300"></center>
-   <p></p>
-   
-    <p>This course is an introduction to the fundamentals of Computer Science
-that will provide students with a foundation for future courses in Computer
-Science. The course is a broad survey of the discipline through topics that
-allow students to understand the capabilities of computer systems in terms
-of: the computer architecture; operating systems and computer networks;
-software and software development; data organization and visualization;
-and the potential of computing machines.</p>
-    </article>
-</section>
-
-<footer>
-  <p>@ Powered by UB</p>
-</footer>
-
+    <script>
+        function calculateSum() {
+            // Get the values from the input fields
+            let num1 = parseFloat(document.getElementById('num1').value);
+            let num2 = parseFloat(document.getElementById('num2').value);
+            
+            // Calculate the sum
+            let sum = num1 + num2;
+            
+            // Display the result
+            document.getElementById('result').textContent = sum;
+        }
+		
+       function calculateProduct() {
+            // Get the values from the input fields
+            let pnum1 = parseFloat(document.getElementById('pnum1').value);
+            let pnum2 = parseFloat(document.getElementById('pnum2').value);
+            
+            // Calculate the sum
+            let product = pnum1 * pnum2;
+            
+            // Display the result
+            document.getElementById('presult').textContent = product;
+        }
+    </script>
 </body>
 </html>

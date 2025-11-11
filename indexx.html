@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" href="bmi.css">
+<title>BMI Calculator</title>
+</head>
+<body>
+<div class="center">
+    <h2><center>BMI Calculator</center></h2>
+    <input type="number" id="inch" placeholder="Enter your height in inches">
+    <input type="number" id="lb" placeholder="Enter your weight in pounds">
+    <button onclick="calculateBMI()">Calculate BMI</button>
+    <button onclick>Result: <span id="result"></span> - <span id= "bmiCategory"></span></p></button>
+</div>
+
+<script>
+    function calculateBMI() {
+        // Get the values from the input fields
+        let inch = parseFloat(document.getElementById('inch').value);
+        let lb = parseFloat(document.getElementById('lb').value);
+
+        // Check if inputs are valid numbers and not zero/negative
+        if (isNaN(inch) || isNaN(lb) || inch <= 0 || lb <= 0) {
+            document.getElementById('result').textContent = "Invalid input";
+            document.getElementById('bmiCategory').textContent = "";
+            return;
+        }
+
+        // Calculate the BMI
+        let bmiValue = (lb * 703) / (inch * inch);
+        let BMI = bmiValue.toFixed(2);
+        let category = "";
+
+        if (bmiValue < 18.5) {
+            category = "You are Underweight";
+			categoryClass = "under-weight";
+        } else if (bmiValue <= 24.9) {
+            category = "You are Normal weight";
+			categoryClass = "normal-weight";
+        } else if (bmiValue <= 29.9) {
+            category = "You are Overweight";
+			categoryClass = "over-weight";
+        } else {
+            category = "You are Obese";
+			categoryClass = "obese-weight";
+        }
+
+        // Display the result
+        document.getElementById('result').textContent = BMI;
+        document.getElementById('bmiCategory').textContent = category;
+    }
+	
+
+	
+</script>
+<center><a href="index.html">Back to Home</a></h3>
+
+<footer>
+  <p>@ Powered by UB</p>
+</footer>	
+
+</body>
+</html>

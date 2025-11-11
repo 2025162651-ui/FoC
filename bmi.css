@@ -1,0 +1,81 @@
+.center {
+  margin: auto;
+  width: 75%;
+  border: 3px solid #73AD21;
+  padding: 100px;
+}
+
+div {
+  background-color: lightblue;
+  width: 500px;
+  height: 400px;
+  border: 20px solid green;
+  padding: 100px;
+  margin: 20px;
+}
+body {
+    background-color: #f4f7f6; /* Soft, light background */
+    font-family: Arial, sans-serif;
+    display: flex; /* Helps with centering */
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+}
+
+/* 2. LAYER 2: The Calculator Card (Structure & Box Look) */
+.calculator-card {
+    background-color: white; /* Clean foreground box */
+    padding: 30px;
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    width: 100%;
+    max-width: 350px; /* Keeps the box short and narrow */
+    text-align: center; /* Centers the title and button */
+}
+
+/* 3. Input Group Styling (Stacking and Sizing) */
+.input-group {
+    text-align: left; /* Aligns the label to the left */
+    margin-bottom: 15px;
+}
+
+label {
+    display: block; /* Makes the label take its own line */
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #555;
+}
+
+input[type="number"] {
+    width: 100%; /* Makes input take full width of the 350px card */
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box; 
+    font-size: 16px;
+}
+
+/* 4. Button and Result Styling */
+button {
+    width: 100%;
+    padding: 12px;
+    margin-top: 10px;
+    background-color: #007bff; /* Primary action color */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.result-display {
+    margin-top: 25px;
+    padding: 15px;
+    background-color: #e9ecef; /* Background for the result box */
+    border-radius: 5px;
+    font-size: 1.1em;
+    font-weight: bold;
+    color: #333;
+}

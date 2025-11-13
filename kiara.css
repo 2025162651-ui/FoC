@@ -1,0 +1,20 @@
+
+.game-container{
+display: flex;
+align-items: center;
+margin: 20px auto;
+max-width: 800px;
+}
+
+.map-area{
+margin-right: 30px;
+}
+
+.button-list{
+display: flex;
+flex-direction: column;
+gap: 10px;
+}
+#myImage{
+	width: 300px;
+	height: aunto;

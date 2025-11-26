@@ -1,0 +1,95 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /* Makes layout calculations easier */
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    line-height: 1.6;
+    background-color: #121212; /* Dark background color */
+    color: #E0E0E0; /* Light text color for contrast */
+    padding: 20px;
+}
+
+/* --- Header Styling --- */
+header {
+    background-color: #00008B; /* Dark purple */
+    color: white;
+    padding: 30px 20px;
+    text-align: center;
+    border-radius: 8px;
+    margin-bottom: 30px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+header h1 {
+    font-size: 2.2rem;
+}
+
+/* --- Layout Container (Responsive Grid using Flexbox) --- */
+.container {
+    display: flex;
+    flex-wrap: wrap; /* Allows cards to wrap on smaller screens */
+    gap: 20px; /* Space between the cards */
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.card {
+    background-color: #00072D; /* Midnight Purple */
+    padding: 25px;
+    border-radius: 8px;
+    flex: 1; /* Distributes space evenly */
+    min-width: 300px; /* Ensures cards don't get too narrow on desktop */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* --- Typography Hierarchy --- */
+h2 {
+    color: #9336FF; /* A vibrant accent purple */
+    margin-bottom: 15px;
+    border-bottom: 2px solid #9336FF;
+    padding-bottom: 10px;
+    font-size: 1.5rem;
+}
+
+h3 {
+    color: #BB86FC; /* Lighter purple for subheadings */
+    margin-top: 20px;
+    margin-bottom: 10px;
+    font-size: 1.2rem;
+}
+
+p {
+    margin-bottom: 15px;
+}
+
+ul, ol {
+    margin-left: 20px;
+    margin-bottom: 15px;
+}
+
+li {
+    margin-bottom: 8px;
+}
+
+/* --- Footer Styling --- */
+footer {
+    text-align: center;
+    margin-top: 40px;
+    padding-top: 20px;
+    color: #888;
+    border-top: 1px solid #444;
+}
+
+/* --- Basic Responsiveness (Mobile Optimization) --- */
+/* Cards stack vertically on screens smaller than 650px */
+@media (max-width: 650px) {
+    .container {
+        flex-direction: column;
+    }
+    header h1 {
+        font-size: 1.5rem;
+    }
+}
